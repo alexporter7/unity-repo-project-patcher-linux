@@ -8,7 +8,9 @@ namespace Kesomannen.RepoProjectPatcher.Editor {
             stepPipeline.SetInputSystem(InputSystemType.Both);
             stepPipeline.SetGameViewResolution("16:9");
             stepPipeline.OpenSceneAtEnd("Main");
+            
             stepPipeline.InsertLast(new FixES3Step());
+            stepPipeline.InsertLast(new GeneratePhotonAssembliesStep());
         }
     }
 }
