@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 
 namespace Kesomannen.RepoProjectPatcher.Editor {
+    // from nomnoms lc wrapper
     public readonly struct FixES3Step : IPatcherStep {
         public UniTask<StepResult> Run() {
             var settings = this.GetSettings();
