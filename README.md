@@ -1,13 +1,14 @@
 <div align="center">
   <h1>R.E.P.O. Project Patcher</h1>
 
+  <img src="images/banner.jpg" />
+
   <p>
     A game wrapper that generates a Unity project from R.E.P.O.'s build that can be playable in-editor
   </p>
 </div>
 
 <div align="center">
-<!-- Badges -->
 
 <span></span>
 <a href="https://github.com/nomnomab/unity-project-patcher">Unity Project Patcher</a>
@@ -22,8 +23,6 @@
 
 <br />
 
-<!-- Table of Contents -->
-
 # Table of Contents
 
 - [About the Project](#about-the-project)
@@ -32,8 +31,6 @@
   - [Installation](#installation)
 - [Usage](#usage)
 - [FAQ](#faq)
-
-<!-- About the Project -->
 
 ## About the Project
 
@@ -46,21 +43,7 @@ This takes a build of R.E.P.O., extracts its assets/scripts/etc, and then genera
 >
 > Also, this tool is for **personal** use only. Do not re-distrubute game files to others.
 
-<!-- Getting Started -->
-
 ## Getting Started
-
-### Already Bundled
-
-This project is bundled with the following packages:
-
-- Insert text if needed or remove section
-
-### Gets Downloaded
-
-- Insert text if needed or remove section
-
-<!-- Prerequisites -->
 
 ### Prerequisites
 
@@ -72,8 +55,6 @@ You will have to make sure you have the following before using the tool in any w
 - [Unity Project Patcher](https://github.com/nomnomab/unity-project-patcher)
 - [Unity Project Patcher BepInEx](https://github.com/nomnomab/unity-project-patcher-bepinex)
   - [Can be disabled](#disabling-bepinex-usage)
-
-<!-- Installation -->
 
 ## Installation
 
@@ -129,8 +110,6 @@ Otherwise, follow the steps at https://github.com/nomnomab/unity-project-patcher
 #### Disabling BepInEx Usage
 
 If you don't want to use plugins, then follow the steps at https://github.com/nomnomab/unity-project-patcher-bepinex#disabling-this-package
-
-<!-- Usage -->
 
 ## Usage
 
