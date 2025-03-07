@@ -121,7 +121,7 @@ The tool window can be opened via `Tools > Unity Project Patcher > Open Window`
 
 Estimated patch durations:
 
-- Fresh patch: TBD
+- Fresh patch: ~10 min
 - Already patched: TBD
 
 These can vary wildly depending on system speed and project size.
