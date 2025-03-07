@@ -121,6 +121,10 @@ MonoBehaviour:
     sourceName: VideoClip
     outputPath: Videos
     exclude: 0
+  - key: Plugins
+    sourceName: Plugins
+    outputPath: Plugins
+    exclude: 0
   _foldersToCopy:
   - AnimationClip
   - AnimatorController
@@ -148,6 +152,7 @@ MonoBehaviour:
   - Sprite
   - StreamingAssets
   - VideoClip
+  - Plugins
   - Scripts\Assembly-CSharp
   - Scripts\Photon3Unity3D
   - Scripts\PhotonChat

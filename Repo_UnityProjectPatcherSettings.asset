@@ -58,10 +58,6 @@ MonoBehaviour:
     outputPath: 
     exclude: 0
   - key: 
-    sourceName: Assembly-CSharp-firstpass.dll
-    outputPath: 
-    exclude: 0
-  - key: 
     sourceName: websocket-sharp.dll
     outputPath: 
     exclude: 0
