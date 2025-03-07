@@ -128,4 +128,10 @@ These can vary wildly depending on system speed and project size.
 
 ## FAQ
 
-The core project's FAQ can be found here: https://github.com/nomnomab/unity-project-patcher#faq
+**Q: How do I get rid of the "No cameras rendering" warning?**
+
+Right click the `Game` window and uncheck the checkbox labeled "Warn if no cameras rendering";
+
+---
+
+For more questions, see core project's FAQ: https://github.com/nomnomab/unity-project-patcher#faq
