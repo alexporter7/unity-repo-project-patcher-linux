@@ -12,7 +12,7 @@
 <span></span>
 <a href="https://github.com/nomnomab/unity-project-patcher">Unity Project Patcher</a>
 <span> · </span>
-<a href="https://github.com/nomnomab/unity-project-patcher/issues/">R.E.P.O.rt Bug</a>
+<a href="https://github.com/nomnomab/unity-project-patcher/issues/">Report Bug</a>
 <span> · </span>
 <a href="https://github.com/nomnomab/unity-project-patcher/issues/">Request Feature</a>
 
