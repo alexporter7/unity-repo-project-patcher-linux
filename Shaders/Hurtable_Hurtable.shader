@@ -1,4 +1,4 @@
-Shader "Hurtable/Hurtable" {
+Shader "Patcher/Hurtable/Hurtable" {
 	Properties {
 		_ColorOverlay ("Color Overlay", Vector) = (1,0,0,0)
 		_ColorOverlayAmount ("Color Overlay Amount", Range(0, 1)) = 0
@@ -33,16 +33,35 @@ Shader "Hurtable/Hurtable" {
 #pragma target 3.0
 
 		sampler2D _AlbedoTexture;
+		sampler2D _NormalTexture;
+		float _NormalStrength;
+		sampler2D _MetallicTexture;
+		float _Metallic;
+		sampler2D _SmoothnessTexture;
+		float _Smoothness;
+
 		struct Input
 		{
-			float2 uv_MainTex;
+			float2 uv_AlbedoTexture;
+			float2 uv_NormalTexture;
+            float2 uv_MetallicTexture;
+			float2 uv_SmoothnessTexture;
 		};
 
 		void surf(Input IN, inout SurfaceOutputStandard o)
 		{
-			fixed4 c = tex2D(_AlbedoTexture, IN.uv_MainTex);
-			o.Albedo = c.rgb;
-			o.Alpha = c.a;
+			float4 color = tex2D(_AlbedoTexture, IN.uv_AlbedoTexture);
+			o.Albedo = color.rgb;
+			o.Alpha = color.a;
+
+			// chatgpt wrote this but it seems to work
+			float3 normal = UnpackNormal(tex2D(_NormalTexture, IN.uv_NormalTexture));
+            normal.xy *= _NormalStrength;
+            normal = normalize(float3(normal.xy, sqrt(1.0 - saturate(dot(normal.xy, normal.xy)))));
+            o.Normal = normal;
+
+			o.Metallic = tex2D(_MetallicTexture, IN.uv_MetallicTexture).r * _Metallic;
+			o.Smoothness = tex2D(_SmoothnessTexture, IN.uv_SmoothnessTexture).r * _Smoothness;
 		}
 		ENDCG
 	}

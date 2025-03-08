@@ -1,4 +1,4 @@
-Shader "Lava" {
+Shader "Patcher/Lava" {
 	Properties {
 		_DiscortScale ("DiscortScale", Float) = 1
 		_Scale ("Scale", Float) = 1
@@ -21,17 +21,22 @@ Shader "Lava" {
 #pragma target 3.0
 
 		sampler2D _Tex;
-		fixed3 _Color1;
-		fixed3 _Color2;
+		float3 _Color1;
+		float3 _Color2;
+		float4 _Scroll;
+
 		struct Input
 		{
-			float2 uv_MainTex;
+			float2 uv_Tex;
 		};
 
 		void surf(Input IN, inout SurfaceOutputStandard o)
 		{
-			fixed4 value = tex2D(_Tex, IN.uv_MainTex);
-			half3 color = lerp(_Color1, _Color2, value);
+			float2 uv = IN.uv_Tex + _Scroll * _Time;
+			
+			float4 value = tex2D(_Tex, uv);
+			float3 color = lerp(_Color1, _Color2, value);
+			
 			o.Albedo = color;
 			o.Alpha = value.a;
 		}
