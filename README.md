@@ -52,21 +52,15 @@ You will have to make sure you have the following before using the tool in any w
 - [Git](https://git-scm.com/download/win)
 - [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
   - To run Asset Ripper
-- [Unity Project Patcher](https://github.com/nomnomab/unity-project-patcher)
-- [Unity Project Patcher BepInEx](https://github.com/nomnomab/unity-project-patcher-bepinex)
-  - [Can be disabled](#disabling-bepinex-usage)
 
 ## Installation
 
 ### Unity Project
 
 - Requires [Unity 2022.3.21f1](https://unity.com/releases/editor/whats-new/2022.3.21f1)
-- Unity built-in pipeline
+- Unity built-in render pipeline
 
 Create a new Unity project with the above requirements before getting started.
-
-> [!IMPORTANT]  
-> These options require [git](https://git-scm.com/download/win) to be installed!
 
 You will need to install three packages in sequence here:
 
