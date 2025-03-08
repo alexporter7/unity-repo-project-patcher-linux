@@ -45,9 +45,7 @@ This takes a build of R.E.P.O., extracts its assets/scripts/etc, and then genera
 
 ## Getting Started
 
-### Prerequisites
-
-You will have to make sure you have the following before using the tool in any way:
+Make sure you have the following before using the tool in any way:
 
 - [Git](https://git-scm.com/download/win)
 - [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
