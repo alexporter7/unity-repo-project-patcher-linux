@@ -71,19 +71,12 @@ You will need to install three packages in sequence here:
 
 ### Installing the Unity Project Patcher core
 
-Install with the package manager:
-
 1. Open the Package Manager from `Window > Package Manager`
 2. Click the '+' button in the top-left of the window
 3. Click 'Add package from git URL'
 4. Provide the URL of the this git repository: `https://github.com/nomnomab/unity-project-patcher.git`
    - If you are using a specific version, you can append it to the end of the git URL, such as `#v1.2.3`
 5. Click the 'add' button
-
-Install with the manifest.json:
-
-1. Open the manifest at `[PROJECT_NAME]\Packages\manifest.json`
-2. Insert the following as an entry:
 
 ```json
 "com.nomnom.unity-project-patcher": "https://github.com/nomnomab/unity-project-patcher.git"
