@@ -54,7 +54,7 @@ Make sure you have the following before using the tool in any way:
 
 ### Unity Project
 
-- Requires [Unity 2022.3.21f1](https://unity.com/releases/editor/whats-new/2022.3.21f1)
+- Requires [Unity 2022.3.21](https://unity.com/releases/editor/whats-new/2022.3.21)
 - Unity built-in render pipeline
 
 Create a new Unity project with the above requirements before getting started.
