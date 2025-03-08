@@ -5,7 +5,6 @@ using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using Nomnom.UnityProjectPatcher.Editor.Steps;
 using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
 
 namespace Kesomannen.RepoProjectPatcher.Editor {
@@ -17,30 +16,54 @@ namespace Kesomannen.RepoProjectPatcher.Editor {
     public struct GeneratePhotonAssembliesStep : IPatcherStep {
         [MenuItem("Tools/R.E.P.O. Project Patcher/Generate Photon Assembly Definitions")]
         static void MenuItem() {
-            GenerateAssemblies();
+            GenerateDefinitions();
             EditorUtility.RequestScriptReload();
         }
         
         static readonly Dictionary<string, string[]> Dependencies = new() {
             { "Photon3Unity3D", Array.Empty<string>() },
-            { "PhotonChat", new [] { "Photon3Unity3D"} },
-            { "PhotonRealtime", new [] { "Photon3Unity3D" } },
-            { "PhotonUnityNetworking", new [] { "Photon3Unity3D", "PhotonRealtime" } },
-            { "PhotonUnityNetworking.Utilities", new [] { "Photon3Unity3D", "PhotonRealtime", "PhotonUnityNetworking" } },
-            { "PhotonVoice", new [] { "Photon3Unity3D", "PhotonRealtime", "PhotonVoice.API" } },
-            { "PhotonVoice.API", new [] { "Photon3Unity3D", "PhotonRealtime"} },
-            { "PhotonVoice.PUN", new [] { "Photon3Unity3D", "PhotonRealtime", "PhotonUnityNetworking", "PhotonVoice", "PhotonVoice.API" } },
+            { "PhotonChat", new [] {
+                "Photon3Unity3D"
+            } },
+            { "PhotonRealtime", new [] {
+                "Photon3Unity3D"
+            } },
+            { "PhotonUnityNetworking", new [] {
+                "Photon3Unity3D", 
+                "PhotonRealtime"
+            } },
+            { "PhotonUnityNetworking.Utilities", new [] {
+                "Photon3Unity3D", 
+                "PhotonRealtime", 
+                "PhotonUnityNetworking"
+            } },
+            { "PhotonVoice", new [] {
+                "Photon3Unity3D", 
+                "PhotonRealtime", 
+                "PhotonVoice.API"
+            } },
+            { "PhotonVoice.API", new [] {
+                "Photon3Unity3D", 
+                "PhotonRealtime"
+            } },
+            { "PhotonVoice.PUN", new [] {
+                "Photon3Unity3D", 
+                "PhotonRealtime", 
+                "PhotonUnityNetworking",
+                "PhotonVoice", 
+                "PhotonVoice.API"
+            } },
         };
         
         public UniTask<StepResult> Run() {
-            GenerateAssemblies();
+            GenerateDefinitions();
 
             return UniTask.FromResult(StepResult.Recompile);
         }
 
-        static void GenerateAssemblies() {
-            var scriptsFolder = Path.Combine(Application.dataPath, "REPO", "Game", "Scripts"); 
-
+        static void GenerateDefinitions() {
+            var scriptsFolder = Path.Combine(Application.dataPath, "REPO", "Game", "Scripts");
+            
             foreach (var (assembly, dependencies) in Dependencies) {
                 var folderPath = Path.Combine(scriptsFolder, assembly);
                 var asmdefPath = Path.Combine(folderPath, $"{assembly}.asmdef");
