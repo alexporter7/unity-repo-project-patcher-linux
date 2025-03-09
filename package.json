@@ -1,7 +1,7 @@
 {
   "name": "com.kesomannen.unity-repo-project-patcher",
   "version": "0.1.1",
-  "displayName": "R.E.P.O. Project Patcher",
+  "displayName": "REPO Project Patcher",
   "description": "A game wrapper that generates a Unity project from R.E.P.O's build that can be playable in-editor",
   "unity": "2022.3",
   "unityRelease": "21f1",
