@@ -110,6 +110,10 @@ Estimated patch durations:
 
 These can vary wildly depending on system speed and project size.
 
+## Credits
+
+Replacement shaders made by [Orton](https://linktr.ee/ortonlonggaming).
+
 ## FAQ
 
 **Q: How do I get rid of the "No cameras rendering" warning?**
